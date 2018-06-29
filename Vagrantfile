@@ -26,5 +26,7 @@ Vagrant.configure("2") do |config|
     curl -L https://github.com/docker/compose/releases/download/1.21.2/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
     chmod +x /usr/local/bin/docker-compose
     gpasswd -a vagrant docker
+    echo 'alias d="docker"' >> /vagrant/home/.bash_profile
+    echo 'alias dc="docker-compose"' >> /vagrant/home/.bash_profile
   SHELL
 end
