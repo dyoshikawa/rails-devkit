@@ -1,7 +1,7 @@
 FROM dyoshikawa/rails:latest
 
-RUN mkdir /myproject
-WORKDIR /myproject
+RUN mkdir -p /usr/src/app
+WORKDIR /usr/src/app
 
 COPY . .
 RUN chmod +x start.sh
